@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>7 GUIs with RxJS</title>
+  </head>
+  <body>
+    <h1>7GUIs with RxJS</h1>
+    <section id="counter">
+      <h2>Counter</h2>
+      <p>
+      <input type="text" id="txtCount"/>
+      <button type="button" id="btnCount">Count</button>
+    </section>
+
+    <section id="temperatur-converter">
+      <h2>Temperature Converter</h2>
+      <p>
+      <input type="number" id="txtCelcius" value="0"/> Celcius = 
+      <input type="number" id="txtFah" value="0"/> Fahrenheit
+      </p>
+    </section>
+
+    <section id="flight-booker">
+      <h2>Flight Booker</h2>
+      <p>
+        <select id="selFlight" name="">
+          <option value="one-way">one-way flight</option>
+          <option value="return">return flight</option>
+        </select>
+      </p>
+      <p>
+        <input type="date" id="txtFrom">
+      </p>
+      <p>
+        <input type="date" id="txtTo">
+      </p>
+      <p><button type="button" id="btnBookFlight">Book</button></p>
+    </section>
+
+    <section>
+      <h2>Timer</h2>
+      <p>Elapsed Time: <progress value="0" max="5000"></progress></p>
+      <p id="elapsed"></p>
+      <p>Duration  <input id="sliderDuration" type="range" value="5" min="1" max="20"><span id="duration"></span> seconds.
+</p>
+<p><button type="button">Reset</button></p>
+    </section>
+
+    <script type="module" src="https://jspm.dev/es-module-shims"></script>
+    <script type="importmap-shim">
+      {
+  "imports": {
+    "rxjs": "https://cdn.skypack.dev/rxjs?min",
+    "rxjs/operators": "https://cdn.skypack.dev/rxjs/operators?min"
+  }
+}
+    </script>
+    <script type="module-shim" src="index.js"></script>
+  </body>
+</html>
