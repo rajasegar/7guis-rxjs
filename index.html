@@ -3,25 +3,52 @@
   <head>
     <meta charset="UTF-8">
     <title>7 GUIs with RxJS</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/" data-navigo>Home</a></li>
+          <li><a href="counter" data-navigo>Counter</a></li>
+          <li><a href="temperature-converter" data-navigo>Temperature Converter</a></li>
+          <li><a href="flight-booker" data-navigo>Flight Booker</a></li>
+          <li><a href="timer" data-navigo>Timer</a></li>
+          <li><a href="crud">CRUD</a></li>
+          <li><a href="circle-drawer">Circle Drawer</a></li>
+          <li><a href="cells">Cells</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
     <h1>7GUIs with RxJS</h1>
-    <section id="counter">
+    <div id="outlet"></div>
+    </main>
+    <footer>
+      <a href="https://github.com/rajasegar/7guis-github">Github</a>
+    </footer>
+    <template id="template-home">
+      <h2>7GUIs: A GUI Programming Benchmark</h2>
+      <p>
+      There are countless GUI toolkits in different languages and with diverse approaches to GUI development. Yet, diligent comparisons between them are rare. Whereas in a traditional benchmark competing implementations are compared in terms of their resource consumption, here implementations are compared in terms of their notation. To that end, 7GUIs defines seven tasks that represent typical challenges in GUI programming. In addition, 7GUIs provides a recommended set of evaluation dimensions.
+      </p>
+    </template>
+    <template id="template-counter">
       <h2>Counter</h2>
       <p>
       <input type="text" id="txtCount"/>
       <button type="button" id="btnCount">Count</button>
-    </section>
+    </template>
 
-    <section id="temperatur-converter">
+    <template id="template-temperature-converter">
       <h2>Temperature Converter</h2>
       <p>
       <input type="number" id="txtCelcius" value="0"/> Celcius = 
       <input type="number" id="txtFah" value="0"/> Fahrenheit
       </p>
-    </section>
+    </template>
 
-    <section id="flight-booker">
+    <template id="template-flight-booker">
       <h2>Flight Booker</h2>
       <p>
         <select id="selFlight" name="">
@@ -36,26 +63,31 @@
         <input type="date" id="txtTo">
       </p>
       <p><button type="button" id="btnBookFlight">Book</button></p>
-    </section>
+    </template>
 
-    <section>
+    <template id="template-timer">
       <h2>Timer</h2>
       <p>Elapsed Time: <progress value="0" max="5000"></progress></p>
       <p id="elapsed"></p>
       <p>Duration  <input id="sliderDuration" type="range" value="5" min="1" max="20"><span id="duration"></span> seconds.
 </p>
 <p><button type="button">Reset</button></p>
-    </section>
+    </template>
+
+    <template id="template-crud"></template>
+    <template id="template-circle-drawer"></template>
+    <template id="template-cells"></template>
 
     <script type="module" src="https://jspm.dev/es-module-shims"></script>
     <script type="importmap-shim">
       {
   "imports": {
     "rxjs": "https://cdn.skypack.dev/rxjs?min",
-    "rxjs/operators": "https://cdn.skypack.dev/rxjs/operators?min"
+    "rxjs/operators": "https://cdn.skypack.dev/rxjs/operators?min",
+    "navigo": "https://cdn.skypack.dev/navigo?min"
   }
 }
     </script>
-    <script type="module-shim" src="index.js"></script>
+    <script type="module-shim" src="js/index.js"></script>
   </body>
 </html>
